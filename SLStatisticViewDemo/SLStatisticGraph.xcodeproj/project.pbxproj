@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A1D72CE1CCFB01800C0876E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D72CD1CCFB01800C0876E /* main.m */; };
+		2A1D72D71CCFB01800C0876E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D72D51CCFB01800C0876E /* Main.storyboard */; };
+		2A1D72D91CCFB01800C0876E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D72D81CCFB01800C0876E /* Assets.xcassets */; };
+		2A1D72DC1CCFB01800C0876E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D72DA1CCFB01800C0876E /* LaunchScreen.storyboard */; };
+		2A1D72E71CCFB01900C0876E /* SLStatisticGraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D72E61CCFB01900C0876E /* SLStatisticGraphTests.m */; };
+		2A1D72F21CCFB01900C0876E /* SLStatisticGraphUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D72F11CCFB01900C0876E /* SLStatisticGraphUITests.m */; };
+		2A1D73401CCFB4C000C0876E /* SLBarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D733F1CCFB4C000C0876E /* SLBarGraphViewController.m */; };
+		2A1D73431CCFB4F600C0876E /* SLLineGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D73421CCFB4F600C0876E /* SLLineGraphViewController.m */; };
+		2A1D73461CCFB8AB00C0876E /* SLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D73451CCFB8AB00C0876E /* SLMainTableViewController.m */; };
+		6B5949191DFDA2E300CF9783 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5949181DFDA2E300CF9783 /* AppDelegate.m */; };
+		6B5949321DFDA99A00CF9783 /* ColumnChartBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5949211DFDA99A00CF9783 /* ColumnChartBasicView.m */; };
+		6B5949331DFDA99A00CF9783 /* LinechartBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5949231DFDA99A00CF9783 /* LinechartBasicView.m */; };
+		6B5949341DFDA99A00CF9783 /* UIBezierPath+curved.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5949261DFDA99A00CF9783 /* UIBezierPath+curved.m */; };
+		6B5949351DFDA99A00CF9783 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5949281DFDA99A00CF9783 /* UIView+Frame.m */; };
+		6B5949361DFDA99A00CF9783 /* statisticsSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B59492B1DFDA99A00CF9783 /* statisticsSet.m */; };
+		6B5949371DFDA99A00CF9783 /* ColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B59492E1DFDA99A00CF9783 /* ColumnChartView.m */; };
+		6B5949381DFDA99A00CF9783 /* LineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5949311DFDA99A00CF9783 /* LineChartView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A1D72E31CCFB01900C0876E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A1D72C11CCFB01800C0876E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A1D72C81CCFB01800C0876E;
+			remoteInfo = SLStatisticGraph;
+		};
+		2A1D72EE1CCFB01900C0876E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A1D72C11CCFB01800C0876E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A1D72C81CCFB01800C0876E;
+			remoteInfo = SLStatisticGraph;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A1D72C91CCFB01800C0876E /* SLStatisticGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLStatisticGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1D72CD1CCFB01800C0876E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A1D72D61CCFB01800C0876E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A1D72D81CCFB01800C0876E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A1D72DB1CCFB01800C0876E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A1D72DD1CCFB01900C0876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1D72E21CCFB01900C0876E /* SLStatisticGraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLStatisticGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1D72E61CCFB01900C0876E /* SLStatisticGraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLStatisticGraphTests.m; sourceTree = "<group>"; };
+		2A1D72E81CCFB01900C0876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1D72ED1CCFB01900C0876E /* SLStatisticGraphUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLStatisticGraphUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1D72F11CCFB01900C0876E /* SLStatisticGraphUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLStatisticGraphUITests.m; sourceTree = "<group>"; };
+		2A1D72F31CCFB01900C0876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1D733C1CCFB1D400C0876E /* SLSGPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLSGPch.pch; sourceTree = "<group>"; };
+		2A1D733D1CCFB24600C0876E /* 说明文档.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "说明文档.m"; sourceTree = "<group>"; };
+		2A1D733E1CCFB4C000C0876E /* SLBarGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBarGraphViewController.h; sourceTree = "<group>"; };
+		2A1D733F1CCFB4C000C0876E /* SLBarGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBarGraphViewController.m; sourceTree = "<group>"; };
+		2A1D73411CCFB4F600C0876E /* SLLineGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLineGraphViewController.h; sourceTree = "<group>"; };
+		2A1D73421CCFB4F600C0876E /* SLLineGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLineGraphViewController.m; sourceTree = "<group>"; };
+		2A1D73441CCFB8AB00C0876E /* SLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMainTableViewController.h; sourceTree = "<group>"; };
+		2A1D73451CCFB8AB00C0876E /* SLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMainTableViewController.m; sourceTree = "<group>"; };
+		6B5949171DFDA2E300CF9783 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SLStatisticGraph/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		6B5949181DFDA2E300CF9783 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SLStatisticGraph/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		6B5949201DFDA99A00CF9783 /* ColumnChartBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnChartBasicView.h; sourceTree = "<group>"; };
+		6B5949211DFDA99A00CF9783 /* ColumnChartBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnChartBasicView.m; sourceTree = "<group>"; };
+		6B5949221DFDA99A00CF9783 /* LinechartBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinechartBasicView.h; sourceTree = "<group>"; };
+		6B5949231DFDA99A00CF9783 /* LinechartBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinechartBasicView.m; sourceTree = "<group>"; };
+		6B5949251DFDA99A00CF9783 /* UIBezierPath+curved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+curved.h"; sourceTree = "<group>"; };
+		6B5949261DFDA99A00CF9783 /* UIBezierPath+curved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+curved.m"; sourceTree = "<group>"; };
+		6B5949271DFDA99A00CF9783 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		6B5949281DFDA99A00CF9783 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		6B59492A1DFDA99A00CF9783 /* statisticsSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statisticsSet.h; sourceTree = "<group>"; };
+		6B59492B1DFDA99A00CF9783 /* statisticsSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statisticsSet.m; sourceTree = "<group>"; };
+		6B59492D1DFDA99A00CF9783 /* ColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnChartView.h; sourceTree = "<group>"; };
+		6B59492E1DFDA99A00CF9783 /* ColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnChartView.m; sourceTree = "<group>"; };
+		6B59492F1DFDA99A00CF9783 /* CSLStatisticLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLStatisticLib.h; sourceTree = "<group>"; };
+		6B5949301DFDA99A00CF9783 /* LineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartView.h; sourceTree = "<group>"; };
+		6B5949311DFDA99A00CF9783 /* LineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A1D72C61CCFB01800C0876E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1D72DF1CCFB01900C0876E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1D72EA1CCFB01900C0876E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A1D72C01CCFB01800C0876E = {
+			isa = PBXGroup;
+			children = (
+				2A1D72CB1CCFB01800C0876E /* SLStatisticGraph */,
+				2A1D72E51CCFB01900C0876E /* SLStatisticGraphTests */,
+				2A1D72F01CCFB01900C0876E /* SLStatisticGraphUITests */,
+				2A1D72CA1CCFB01800C0876E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A1D72CA1CCFB01800C0876E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D72C91CCFB01800C0876E /* SLStatisticGraph.app */,
+				2A1D72E21CCFB01900C0876E /* SLStatisticGraphTests.xctest */,
+				2A1D72ED1CCFB01900C0876E /* SLStatisticGraphUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A1D72CB1CCFB01800C0876E /* SLStatisticGraph */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D731A1CCFB14100C0876E /* Classes */,
+				2A1D72D81CCFB01800C0876E /* Assets.xcassets */,
+				2A1D72CC1CCFB01800C0876E /* Supporting Files */,
+			);
+			path = SLStatisticGraph;
+			sourceTree = "<group>";
+		};
+		2A1D72CC1CCFB01800C0876E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D72DA1CCFB01800C0876E /* LaunchScreen.storyboard */,
+				2A1D72DD1CCFB01900C0876E /* Info.plist */,
+				2A1D72D51CCFB01800C0876E /* Main.storyboard */,
+				2A1D72CD1CCFB01800C0876E /* main.m */,
+				2A1D733C1CCFB1D400C0876E /* SLSGPch.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A1D72E51CCFB01900C0876E /* SLStatisticGraphTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D72E61CCFB01900C0876E /* SLStatisticGraphTests.m */,
+				2A1D72E81CCFB01900C0876E /* Info.plist */,
+			);
+			path = SLStatisticGraphTests;
+			sourceTree = "<group>";
+		};
+		2A1D72F01CCFB01900C0876E /* SLStatisticGraphUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D72F11CCFB01900C0876E /* SLStatisticGraphUITests.m */,
+				2A1D72F31CCFB01900C0876E /* Info.plist */,
+			);
+			path = SLStatisticGraphUITests;
+			sourceTree = "<group>";
+		};
+		2A1D731A1CCFB14100C0876E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6B59491E1DFDA99A00CF9783 /* SLStatisticView */,
+				2A1D733B1CCFB18900C0876E /* Docs */,
+				2A1D731B1CCFB14100C0876E /* DemoViews */,
+				2A1D731F1CCFB14100C0876E /* Others */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2A1D731B1CCFB14100C0876E /* DemoViews */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D731C1CCFB14100C0876E /* Controllers */,
+				2A1D731D1CCFB14100C0876E /* Modes */,
+				2A1D731E1CCFB14100C0876E /* Views */,
+			);
+			path = DemoViews;
+			sourceTree = "<group>";
+		};
+		2A1D731C1CCFB14100C0876E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D73441CCFB8AB00C0876E /* SLMainTableViewController.h */,
+				2A1D73451CCFB8AB00C0876E /* SLMainTableViewController.m */,
+				2A1D733E1CCFB4C000C0876E /* SLBarGraphViewController.h */,
+				2A1D733F1CCFB4C000C0876E /* SLBarGraphViewController.m */,
+				2A1D73411CCFB4F600C0876E /* SLLineGraphViewController.h */,
+				2A1D73421CCFB4F600C0876E /* SLLineGraphViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A1D731D1CCFB14100C0876E /* Modes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modes;
+			sourceTree = "<group>";
+		};
+		2A1D731E1CCFB14100C0876E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A1D731F1CCFB14100C0876E /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6B5949171DFDA2E300CF9783 /* AppDelegate.h */,
+				6B5949181DFDA2E300CF9783 /* AppDelegate.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		2A1D733B1CCFB18900C0876E /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D733D1CCFB24600C0876E /* 说明文档.m */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
+		6B59491E1DFDA99A00CF9783 /* SLStatisticView */ = {
+			isa = PBXGroup;
+			children = (
+				6B59491F1DFDA99A00CF9783 /* BasicViews */,
+				6B5949241DFDA99A00CF9783 /* Category */,
+				6B5949291DFDA99A00CF9783 /* SettingMode */,
+				6B59492C1DFDA99A00CF9783 /* StatisticViewItems */,
+			);
+			path = SLStatisticView;
+			sourceTree = "<group>";
+		};
+		6B59491F1DFDA99A00CF9783 /* BasicViews */ = {
+			isa = PBXGroup;
+			children = (
+				6B5949201DFDA99A00CF9783 /* ColumnChartBasicView.h */,
+				6B5949211DFDA99A00CF9783 /* ColumnChartBasicView.m */,
+				6B5949221DFDA99A00CF9783 /* LinechartBasicView.h */,
+				6B5949231DFDA99A00CF9783 /* LinechartBasicView.m */,
+			);
+			path = BasicViews;
+			sourceTree = "<group>";
+		};
+		6B5949241DFDA99A00CF9783 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6B5949251DFDA99A00CF9783 /* UIBezierPath+curved.h */,
+				6B5949261DFDA99A00CF9783 /* UIBezierPath+curved.m */,
+				6B5949271DFDA99A00CF9783 /* UIView+Frame.h */,
+				6B5949281DFDA99A00CF9783 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		6B5949291DFDA99A00CF9783 /* SettingMode */ = {
+			isa = PBXGroup;
+			children = (
+				6B59492A1DFDA99A00CF9783 /* statisticsSet.h */,
+				6B59492B1DFDA99A00CF9783 /* statisticsSet.m */,
+			);
+			path = SettingMode;
+			sourceTree = "<group>";
+		};
+		6B59492C1DFDA99A00CF9783 /* StatisticViewItems */ = {
+			isa = PBXGroup;
+			children = (
+				6B59492D1DFDA99A00CF9783 /* ColumnChartView.h */,
+				6B59492E1DFDA99A00CF9783 /* ColumnChartView.m */,
+				6B59492F1DFDA99A00CF9783 /* CSLStatisticLib.h */,
+				6B5949301DFDA99A00CF9783 /* LineChartView.h */,
+				6B5949311DFDA99A00CF9783 /* LineChartView.m */,
+			);
+			path = StatisticViewItems;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A1D72C81CCFB01800C0876E /* SLStatisticGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A1D72F61CCFB01900C0876E /* Build configuration list for PBXNativeTarget "SLStatisticGraph" */;
+			buildPhases = (
+				2A1D72C51CCFB01800C0876E /* Sources */,
+				2A1D72C61CCFB01800C0876E /* Frameworks */,
+				2A1D72C71CCFB01800C0876E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLStatisticGraph;
+			productName = SLStatisticGraph;
+			productReference = 2A1D72C91CCFB01800C0876E /* SLStatisticGraph.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A1D72E11CCFB01900C0876E /* SLStatisticGraphTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A1D72F91CCFB01900C0876E /* Build configuration list for PBXNativeTarget "SLStatisticGraphTests" */;
+			buildPhases = (
+				2A1D72DE1CCFB01900C0876E /* Sources */,
+				2A1D72DF1CCFB01900C0876E /* Frameworks */,
+				2A1D72E01CCFB01900C0876E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A1D72E41CCFB01900C0876E /* PBXTargetDependency */,
+			);
+			name = SLStatisticGraphTests;
+			productName = SLStatisticGraphTests;
+			productReference = 2A1D72E21CCFB01900C0876E /* SLStatisticGraphTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2A1D72EC1CCFB01900C0876E /* SLStatisticGraphUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A1D72FC1CCFB01900C0876E /* Build configuration list for PBXNativeTarget "SLStatisticGraphUITests" */;
+			buildPhases = (
+				2A1D72E91CCFB01900C0876E /* Sources */,
+				2A1D72EA1CCFB01900C0876E /* Frameworks */,
+				2A1D72EB1CCFB01900C0876E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A1D72EF1CCFB01900C0876E /* PBXTargetDependency */,
+			);
+			name = SLStatisticGraphUITests;
+			productName = SLStatisticGraphUITests;
+			productReference = 2A1D72ED1CCFB01900C0876E /* SLStatisticGraphUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A1D72C11CCFB01800C0876E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = smart;
+				TargetAttributes = {
+					2A1D72C81CCFB01800C0876E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = N9C3BTD9LM;
+					};
+					2A1D72E11CCFB01900C0876E = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 2A1D72C81CCFB01800C0876E;
+					};
+					2A1D72EC1CCFB01900C0876E = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 2A1D72C81CCFB01800C0876E;
+					};
+				};
+			};
+			buildConfigurationList = 2A1D72C41CCFB01800C0876E /* Build configuration list for PBXProject "SLStatisticGraph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A1D72C01CCFB01800C0876E;
+			productRefGroup = 2A1D72CA1CCFB01800C0876E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A1D72C81CCFB01800C0876E /* SLStatisticGraph */,
+				2A1D72E11CCFB01900C0876E /* SLStatisticGraphTests */,
+				2A1D72EC1CCFB01900C0876E /* SLStatisticGraphUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A1D72C71CCFB01800C0876E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A1D72DC1CCFB01800C0876E /* LaunchScreen.storyboard in Resources */,
+				2A1D72D91CCFB01800C0876E /* Assets.xcassets in Resources */,
+				2A1D72D71CCFB01800C0876E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1D72E01CCFB01900C0876E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1D72EB1CCFB01900C0876E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A1D72C51CCFB01800C0876E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5949341DFDA99A00CF9783 /* UIBezierPath+curved.m in Sources */,
+				2A1D73401CCFB4C000C0876E /* SLBarGraphViewController.m in Sources */,
+				6B5949371DFDA99A00CF9783 /* ColumnChartView.m in Sources */,
+				6B5949191DFDA2E300CF9783 /* AppDelegate.m in Sources */,
+				6B5949351DFDA99A00CF9783 /* UIView+Frame.m in Sources */,
+				2A1D73461CCFB8AB00C0876E /* SLMainTableViewController.m in Sources */,
+				6B5949361DFDA99A00CF9783 /* statisticsSet.m in Sources */,
+				2A1D72CE1CCFB01800C0876E /* main.m in Sources */,
+				6B5949321DFDA99A00CF9783 /* ColumnChartBasicView.m in Sources */,
+				6B5949331DFDA99A00CF9783 /* LinechartBasicView.m in Sources */,
+				2A1D73431CCFB4F600C0876E /* SLLineGraphViewController.m in Sources */,
+				6B5949381DFDA99A00CF9783 /* LineChartView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1D72DE1CCFB01900C0876E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A1D72E71CCFB01900C0876E /* SLStatisticGraphTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1D72E91CCFB01900C0876E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A1D72F21CCFB01900C0876E /* SLStatisticGraphUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A1D72E41CCFB01900C0876E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A1D72C81CCFB01800C0876E /* SLStatisticGraph */;
+			targetProxy = 2A1D72E31CCFB01900C0876E /* PBXContainerItemProxy */;
+		};
+		2A1D72EF1CCFB01900C0876E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A1D72C81CCFB01800C0876E /* SLStatisticGraph */;
+			targetProxy = 2A1D72EE1CCFB01900C0876E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A1D72D51CCFB01800C0876E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A1D72D61CCFB01800C0876E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A1D72DA1CCFB01800C0876E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A1D72DB1CCFB01800C0876E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A1D72F41CCFB01900C0876E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2A1D72F51CCFB01900C0876E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A1D72F71CCFB01900C0876E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = SLStatisticGraph/SLSGPch.pch;
+				INFOPLIST_FILE = SLStatisticGraph/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugull.SmartTest.SLStatisticGraph;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		2A1D72F81CCFB01900C0876E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = SLStatisticGraph/SLSGPch.pch;
+				INFOPLIST_FILE = SLStatisticGraph/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugull.SmartTest.SLStatisticGraph;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		2A1D72FA1CCFB01900C0876E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SLStatisticGraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugull.SmartTest.SLStatisticGraphTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLStatisticGraph.app/SLStatisticGraph";
+			};
+			name = Debug;
+		};
+		2A1D72FB1CCFB01900C0876E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SLStatisticGraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugull.SmartTest.SLStatisticGraphTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLStatisticGraph.app/SLStatisticGraph";
+			};
+			name = Release;
+		};
+		2A1D72FD1CCFB01900C0876E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SLStatisticGraphUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugull.SmartTest.SLStatisticGraphUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SLStatisticGraph;
+			};
+			name = Debug;
+		};
+		2A1D72FE1CCFB01900C0876E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SLStatisticGraphUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugull.SmartTest.SLStatisticGraphUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SLStatisticGraph;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A1D72C41CCFB01800C0876E /* Build configuration list for PBXProject "SLStatisticGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A1D72F41CCFB01900C0876E /* Debug */,
+				2A1D72F51CCFB01900C0876E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A1D72F61CCFB01900C0876E /* Build configuration list for PBXNativeTarget "SLStatisticGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A1D72F71CCFB01900C0876E /* Debug */,
+				2A1D72F81CCFB01900C0876E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A1D72F91CCFB01900C0876E /* Build configuration list for PBXNativeTarget "SLStatisticGraphTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A1D72FA1CCFB01900C0876E /* Debug */,
+				2A1D72FB1CCFB01900C0876E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A1D72FC1CCFB01900C0876E /* Build configuration list for PBXNativeTarget "SLStatisticGraphUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A1D72FD1CCFB01900C0876E /* Debug */,
+				2A1D72FE1CCFB01900C0876E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A1D72C11CCFB01800C0876E /* Project object */;
+}
