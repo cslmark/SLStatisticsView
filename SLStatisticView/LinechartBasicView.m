@@ -15,7 +15,7 @@
 #define     MAXSTEP             320
 #define     MINSTEP             1
 
-@interface LinechartBasicView()
+@interface LinechartBasicView()<CAAnimationDelegate>
 {
     //死量
     float xleft;
