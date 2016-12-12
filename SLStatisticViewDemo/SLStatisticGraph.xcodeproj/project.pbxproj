@@ -17,13 +17,13 @@
 		2A1D73431CCFB4F600C0876E /* SLLineGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D73421CCFB4F600C0876E /* SLLineGraphViewController.m */; };
 		2A1D73461CCFB8AB00C0876E /* SLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D73451CCFB8AB00C0876E /* SLMainTableViewController.m */; };
 		6B5949191DFDA2E300CF9783 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5949181DFDA2E300CF9783 /* AppDelegate.m */; };
-		6B7B801B1DFEDC1C003FE43C /* ColumnChartBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B800D1DFEDC1C003FE43C /* ColumnChartBasicView.m */; };
-		6B7B801C1DFEDC1C003FE43C /* ColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B800F1DFEDC1C003FE43C /* ColumnChartView.m */; };
-		6B7B801D1DFEDC1C003FE43C /* LinechartBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80121DFEDC1C003FE43C /* LinechartBasicView.m */; };
-		6B7B801E1DFEDC1C003FE43C /* LineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80141DFEDC1C003FE43C /* LineChartView.m */; };
-		6B7B801F1DFEDC1C003FE43C /* statisticsSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80161DFEDC1C003FE43C /* statisticsSet.m */; };
-		6B7B80201DFEDC1C003FE43C /* UIBezierPath+curved.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80181DFEDC1C003FE43C /* UIBezierPath+curved.m */; };
-		6B7B80211DFEDC1C003FE43C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B801A1DFEDC1C003FE43C /* UIView+Frame.m */; };
+		6B7B804C1DFEECC8003FE43C /* ColumnChartBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B803E1DFEECC8003FE43C /* ColumnChartBasicView.m */; };
+		6B7B804D1DFEECC8003FE43C /* ColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80401DFEECC8003FE43C /* ColumnChartView.m */; };
+		6B7B804E1DFEECC8003FE43C /* LinechartBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80431DFEECC8003FE43C /* LinechartBasicView.m */; };
+		6B7B804F1DFEECC8003FE43C /* LineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80451DFEECC8003FE43C /* LineChartView.m */; };
+		6B7B80501DFEECC8003FE43C /* statisticsSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80471DFEECC8003FE43C /* statisticsSet.m */; };
+		6B7B80511DFEECC8003FE43C /* UIBezierPath+curved.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B80491DFEECC8003FE43C /* UIBezierPath+curved.m */; };
+		6B7B80521DFEECC8003FE43C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B804B1DFEECC8003FE43C /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,21 +66,21 @@
 		2A1D73451CCFB8AB00C0876E /* SLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMainTableViewController.m; sourceTree = "<group>"; };
 		6B5949171DFDA2E300CF9783 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SLStatisticGraph/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		6B5949181DFDA2E300CF9783 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SLStatisticGraph/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		6B7B800C1DFEDC1C003FE43C /* ColumnChartBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnChartBasicView.h; sourceTree = "<group>"; };
-		6B7B800D1DFEDC1C003FE43C /* ColumnChartBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnChartBasicView.m; sourceTree = "<group>"; };
-		6B7B800E1DFEDC1C003FE43C /* ColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnChartView.h; sourceTree = "<group>"; };
-		6B7B800F1DFEDC1C003FE43C /* ColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnChartView.m; sourceTree = "<group>"; };
-		6B7B80101DFEDC1C003FE43C /* CSLStatisticLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLStatisticLib.h; sourceTree = "<group>"; };
-		6B7B80111DFEDC1C003FE43C /* LinechartBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinechartBasicView.h; sourceTree = "<group>"; };
-		6B7B80121DFEDC1C003FE43C /* LinechartBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinechartBasicView.m; sourceTree = "<group>"; };
-		6B7B80131DFEDC1C003FE43C /* LineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartView.h; sourceTree = "<group>"; };
-		6B7B80141DFEDC1C003FE43C /* LineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartView.m; sourceTree = "<group>"; };
-		6B7B80151DFEDC1C003FE43C /* statisticsSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statisticsSet.h; sourceTree = "<group>"; };
-		6B7B80161DFEDC1C003FE43C /* statisticsSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statisticsSet.m; sourceTree = "<group>"; };
-		6B7B80171DFEDC1C003FE43C /* UIBezierPath+curved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+curved.h"; sourceTree = "<group>"; };
-		6B7B80181DFEDC1C003FE43C /* UIBezierPath+curved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+curved.m"; sourceTree = "<group>"; };
-		6B7B80191DFEDC1C003FE43C /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		6B7B801A1DFEDC1C003FE43C /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		6B7B803D1DFEECC8003FE43C /* ColumnChartBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColumnChartBasicView.h; path = ../SLStatisticView/ColumnChartBasicView.h; sourceTree = "<group>"; };
+		6B7B803E1DFEECC8003FE43C /* ColumnChartBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColumnChartBasicView.m; path = ../SLStatisticView/ColumnChartBasicView.m; sourceTree = "<group>"; };
+		6B7B803F1DFEECC8003FE43C /* ColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColumnChartView.h; path = ../SLStatisticView/ColumnChartView.h; sourceTree = "<group>"; };
+		6B7B80401DFEECC8003FE43C /* ColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColumnChartView.m; path = ../SLStatisticView/ColumnChartView.m; sourceTree = "<group>"; };
+		6B7B80411DFEECC8003FE43C /* CSLStatisticLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLStatisticLib.h; path = ../SLStatisticView/CSLStatisticLib.h; sourceTree = "<group>"; };
+		6B7B80421DFEECC8003FE43C /* LinechartBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinechartBasicView.h; path = ../SLStatisticView/LinechartBasicView.h; sourceTree = "<group>"; };
+		6B7B80431DFEECC8003FE43C /* LinechartBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinechartBasicView.m; path = ../SLStatisticView/LinechartBasicView.m; sourceTree = "<group>"; };
+		6B7B80441DFEECC8003FE43C /* LineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChartView.h; path = ../SLStatisticView/LineChartView.h; sourceTree = "<group>"; };
+		6B7B80451DFEECC8003FE43C /* LineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineChartView.m; path = ../SLStatisticView/LineChartView.m; sourceTree = "<group>"; };
+		6B7B80461DFEECC8003FE43C /* statisticsSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = statisticsSet.h; path = ../SLStatisticView/statisticsSet.h; sourceTree = "<group>"; };
+		6B7B80471DFEECC8003FE43C /* statisticsSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = statisticsSet.m; path = ../SLStatisticView/statisticsSet.m; sourceTree = "<group>"; };
+		6B7B80481DFEECC8003FE43C /* UIBezierPath+curved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+curved.h"; path = "../SLStatisticView/UIBezierPath+curved.h"; sourceTree = "<group>"; };
+		6B7B80491DFEECC8003FE43C /* UIBezierPath+curved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+curved.m"; path = "../SLStatisticView/UIBezierPath+curved.m"; sourceTree = "<group>"; };
+		6B7B804A1DFEECC8003FE43C /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "../SLStatisticView/UIView+Frame.h"; sourceTree = "<group>"; };
+		6B7B804B1DFEECC8003FE43C /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "../SLStatisticView/UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		2A1D72C01CCFB01800C0876E = {
 			isa = PBXGroup;
 			children = (
-				6B7B800B1DFEDBEA003FE43C /* SLGraphLib */,
+				6B7B80341DFEEC2D003FE43C /* SLLib */,
 				2A1D72CB1CCFB01800C0876E /* SLStatisticGraph */,
 				2A1D72E51CCFB01900C0876E /* SLStatisticGraphTests */,
 				2A1D72F01CCFB01900C0876E /* SLStatisticGraphUITests */,
@@ -233,26 +233,26 @@
 			path = Docs;
 			sourceTree = "<group>";
 		};
-		6B7B800B1DFEDBEA003FE43C /* SLGraphLib */ = {
+		6B7B80341DFEEC2D003FE43C /* SLLib */ = {
 			isa = PBXGroup;
 			children = (
-				6B7B800C1DFEDC1C003FE43C /* ColumnChartBasicView.h */,
-				6B7B800D1DFEDC1C003FE43C /* ColumnChartBasicView.m */,
-				6B7B800E1DFEDC1C003FE43C /* ColumnChartView.h */,
-				6B7B800F1DFEDC1C003FE43C /* ColumnChartView.m */,
-				6B7B80101DFEDC1C003FE43C /* CSLStatisticLib.h */,
-				6B7B80111DFEDC1C003FE43C /* LinechartBasicView.h */,
-				6B7B80121DFEDC1C003FE43C /* LinechartBasicView.m */,
-				6B7B80131DFEDC1C003FE43C /* LineChartView.h */,
-				6B7B80141DFEDC1C003FE43C /* LineChartView.m */,
-				6B7B80151DFEDC1C003FE43C /* statisticsSet.h */,
-				6B7B80161DFEDC1C003FE43C /* statisticsSet.m */,
-				6B7B80171DFEDC1C003FE43C /* UIBezierPath+curved.h */,
-				6B7B80181DFEDC1C003FE43C /* UIBezierPath+curved.m */,
-				6B7B80191DFEDC1C003FE43C /* UIView+Frame.h */,
-				6B7B801A1DFEDC1C003FE43C /* UIView+Frame.m */,
+				6B7B803D1DFEECC8003FE43C /* ColumnChartBasicView.h */,
+				6B7B803E1DFEECC8003FE43C /* ColumnChartBasicView.m */,
+				6B7B803F1DFEECC8003FE43C /* ColumnChartView.h */,
+				6B7B80401DFEECC8003FE43C /* ColumnChartView.m */,
+				6B7B80411DFEECC8003FE43C /* CSLStatisticLib.h */,
+				6B7B80421DFEECC8003FE43C /* LinechartBasicView.h */,
+				6B7B80431DFEECC8003FE43C /* LinechartBasicView.m */,
+				6B7B80441DFEECC8003FE43C /* LineChartView.h */,
+				6B7B80451DFEECC8003FE43C /* LineChartView.m */,
+				6B7B80461DFEECC8003FE43C /* statisticsSet.h */,
+				6B7B80471DFEECC8003FE43C /* statisticsSet.m */,
+				6B7B80481DFEECC8003FE43C /* UIBezierPath+curved.h */,
+				6B7B80491DFEECC8003FE43C /* UIBezierPath+curved.m */,
+				6B7B804A1DFEECC8003FE43C /* UIView+Frame.h */,
+				6B7B804B1DFEECC8003FE43C /* UIView+Frame.m */,
 			);
-			name = SLGraphLib;
+			name = SLLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,18 +386,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7B80211DFEDC1C003FE43C /* UIView+Frame.m in Sources */,
+				6B7B80521DFEECC8003FE43C /* UIView+Frame.m in Sources */,
 				2A1D73401CCFB4C000C0876E /* SLBarGraphViewController.m in Sources */,
-				6B7B801C1DFEDC1C003FE43C /* ColumnChartView.m in Sources */,
-				6B7B801E1DFEDC1C003FE43C /* LineChartView.m in Sources */,
+				6B7B804D1DFEECC8003FE43C /* ColumnChartView.m in Sources */,
+				6B7B804F1DFEECC8003FE43C /* LineChartView.m in Sources */,
 				6B5949191DFDA2E300CF9783 /* AppDelegate.m in Sources */,
 				2A1D73461CCFB8AB00C0876E /* SLMainTableViewController.m in Sources */,
-				6B7B801F1DFEDC1C003FE43C /* statisticsSet.m in Sources */,
+				6B7B80501DFEECC8003FE43C /* statisticsSet.m in Sources */,
 				2A1D72CE1CCFB01800C0876E /* main.m in Sources */,
-				6B7B801B1DFEDC1C003FE43C /* ColumnChartBasicView.m in Sources */,
-				6B7B801D1DFEDC1C003FE43C /* LinechartBasicView.m in Sources */,
+				6B7B804C1DFEECC8003FE43C /* ColumnChartBasicView.m in Sources */,
+				6B7B804E1DFEECC8003FE43C /* LinechartBasicView.m in Sources */,
 				2A1D73431CCFB4F600C0876E /* SLLineGraphViewController.m in Sources */,
-				6B7B80201DFEDC1C003FE43C /* UIBezierPath+curved.m in Sources */,
+				6B7B80511DFEECC8003FE43C /* UIBezierPath+curved.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
