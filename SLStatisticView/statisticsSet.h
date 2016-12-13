@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface statisticsSet : NSObject
+@interface statisticsSet : NSObject<NSCopying,NSMutableCopying>
 //y轴的总数目
 @property (nonatomic, assign) CGFloat ytotal;
 //y轴的其实坐标
@@ -50,4 +50,6 @@
 @property (nonatomic, strong) UIColor* PointColor;
 @property (nonatomic, strong) UIFont*  XlabelFont;
 @property (nonatomic, strong) UIFont*  ReminderFont;
+@property (nonatomic, strong) UIFont*  YlabelFont;
+@property (nonatomic, strong) UIColor* YlabelColor;
 @end

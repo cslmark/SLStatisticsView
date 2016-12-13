@@ -38,5 +38,4 @@
     copy.ReminderFont = [self.ReminderFont copyWithZone:zone];
     return copy;
 }
-
 @end

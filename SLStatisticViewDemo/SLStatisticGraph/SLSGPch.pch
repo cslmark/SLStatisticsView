@@ -10,5 +10,8 @@
 #define SLSGPch_pch
 
 #define     SLColor(r, g, b, p)    [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:p];
+#import "UIColor+SLExtension.h"
+#define   KScreen_W    [[UIScreen mainScreen] bounds].size.width
+#define   KScreen_H    [[UIScreen mainScreen] bounds].size.height
 
 #endif /* SLSGPch_pch */

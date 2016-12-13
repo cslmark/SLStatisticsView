@@ -15,7 +15,7 @@
 #define     MAXSTEP             320
 #define     MINSTEP             1
 
-@interface LinechartBasicView()<CAAnimationDelegate>
+@interface LinechartBasicView()
 {
     //死量
     float xleft;
@@ -46,6 +46,10 @@
 //增加曲线的图层
 @property (nonatomic, strong)  CAShapeLayer* curveshapeLayer;
 @property (nonatomic, weak) UIButton* remainbtn;
+@property (nonatomic, weak) UIView* showdowView;
+@property (nonatomic, weak) UIButton* indexPointButton;
+@property (nonatomic, weak) UILabel* indexView;
+@property (nonatomic, weak) CAShapeLayer* Zeroline;
 @end
 
 @implementation LinechartBasicView
@@ -76,7 +80,6 @@
     self.curveshapeLayer = [[CAShapeLayer alloc] init];
     self.curveshapeLayer.fillColor = [UIColor clearColor].CGColor;
     [self.layer addSublayer:self.curveshapeLayer];
-    
     self.curveshapeLayer.lineJoin = @"round";
     
     
@@ -183,7 +186,7 @@
     //开始画坐标线
     [self.linechatset.ylineCorlor set];
     CGContextSetLineWidth(ctx, 0.5);
-    int ycount = self.linechatset.ytotal/self.linechatset.yunit;
+    int ycount = (self.linechatset.ytotal - self.linechatset.ybasic)/self.linechatset.yunit;
     CGFloat Ypixall = (myH - ybottom - ytop);
     CGFloat Y_padding = Ypixall / ycount;
     for (int i = 0; i < ycount+1; i++) {
@@ -192,21 +195,134 @@
         CGContextStrokePath(ctx);
     }
     
+    //放置0的线的位置 y = 0的虚线
+    if ((self.linechatset.ybasic < 0) && (self.linechatset.ytotal > 0)) {
+        [self.Zeroline removeFromSuperlayer];
+        CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
+        CGFloat yZero =  myH - (ybottom + (0 - self.linechatset.ybasic) * ypixunit);
+        UIBezierPath* path = [[UIBezierPath alloc] init];
+        [path moveToPoint:CGPointMake(0, yZero)];
+        [path addLineToPoint:CGPointMake(myW, yZero)];
+        
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        [shapeLayer setBounds:self.bounds];
+        [shapeLayer setPosition:self.center];
+        [shapeLayer setFillColor:[[UIColor clearColor] CGColor]];
+        [shapeLayer setStrokeColor:[UIColor blueColor].CGColor];
+        [shapeLayer setLineWidth:1.0f];
+        [shapeLayer setLineJoin:kCALineJoinRound];
+        [shapeLayer setLineDashPattern:[NSArray arrayWithObjects:[NSNumber numberWithInt:3],
+                                        [NSNumber numberWithInt:1],nil]];
+        [shapeLayer setPath:path.CGPath];
+        [self.layer addSublayer:shapeLayer];
+        self.Zeroline = shapeLayer;
+    }
 
+    //开始绘制曲线
+    CGFloat lastX = 0, lastY = 0;
+    BOOL lastCur = NO;
+    CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
+    
+//    CGContextSaveGState(ctx);
+//    [self.linechatset.CurveColor set];
+//    CGContextSetLineWidth(ctx, 2.5f);
+//    for (int z = 0; z < self.xarray.count; z++) {
+//        NSNumber *num = self.yarray[z];
+//        CGFloat ypoint0 =  myH - (ybottom + ([num intValue] - self.linechatset.ybasic) * ypixunit);
+//        if ([num isEqualToNumber:NAValidNum]) {
+//            ypoint0 = myH - (ybottom + (0 - self.linechatset.ybasic) * ypixunit);
+//        }
+//        CGFloat pointX = xleft + z*xstep;
+//        CGFloat pointY = ypoint0;
+//        
+//        if ([num isEqualToNumber:NAValidNum]) {
+//            //虚线和实线的实现
+//            if (lastCur == NO) {
+//                CGContextSaveGState(ctx);
+//                CGFloat pattern[2] = {3,3};
+//                CGContextSetLineDash(ctx, 3, pattern, 2);
+//                lastCur = YES;
+//            }
+//        }else{
+//            //虚线和实线的实现
+//            if (lastCur == YES) {
+//                CGContextRestoreGState(ctx);
+//                lastCur = NO;
+//            }
+//        }
+//        
+//        if(z == 0)
+//        {
+//            CGContextMoveToPoint(ctx, pointX, pointY);
+//        }else{
+//            CGContextMoveToPoint(ctx, lastX, lastY);
+//            //绘制曲线
+//            CGFloat X2 = (lastX+pointX)/2.0;
+//            CGFloat Y2 = lastY;
+//            
+//            CGFloat X3 = (lastX+pointX)/2.0;
+//            CGFloat Y3 = pointY;
+//            CGContextAddCurveToPoint(ctx, X2, Y2, X3, Y3, pointX, pointY);
+//            CGContextStrokePath(ctx);
+//        }
+//        
+//        lastX = pointX;
+//        lastY = pointY;
+//        
+//        //        UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
+//        //        button.layer.cornerRadius=3;
+//        //        button.frame=CGRectMake(0, 0, 6, 6);
+//        //        button.center = temppoint;
+//        //        button.tag = z;
+//        //        button.backgroundColor = self.linechatset.PointColor;
+//        //        [self addSubview:button];
+//        //        
+//        //        [buttons addObject:button];
+//    }
+//    CGContextRestoreGState(ctx);
+
+    
     self.curveshapeLayer.frame = self.bounds;
     self.curveshapeLayer.strokeColor = self.linechatset.CurveColor.CGColor;
-    self.curveshapeLayer.lineWidth = 1;
+    self.curveshapeLayer.lineWidth = 2;
     self.curveshapeLayer.path = [self graphPathFromPoints].CGPath;
+    self.curveshapeLayer.shadowColor = [UIColor lightGrayColor].CGColor;
+    self.curveshapeLayer.shadowOffset = CGSizeMake(4, 0);
+    self.curveshapeLayer.shadowRadius = 1.0;
+    self.curveshapeLayer.shadowOpacity = 0.8;
     
     if (self.remainbtn != nil) {
         [self.remainbtn removeFromSuperview];
     }
-    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.remainbtn = button;
-    [button setTitleColor:self.linechatset.ReminderColor forState:UIControlStateNormal];  //self.linechatset.ReminderColor
-    [self updateRemainBtn];
-    button.hidden = YES;
-    [self addSubview:button];
+    if (self.showdowView != nil) {
+        [self.showdowView removeFromSuperview];
+    }
+    if (self.self.indexView != nil) {
+        [self.indexView removeFromSuperview];
+    }
+    if (self.indexPointButton != nil) {
+        [self.indexPointButton removeFromSuperview];
+    }
+    UIView* showdowView = [[UIView alloc] init];
+    self.showdowView.userInteractionEnabled = NO;
+    showdowView.backgroundColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:0.25];
+    showdowView.alpha = 0.25;
+//    showdowView.backgroundColor = [UIColor yellowColor];
+    showdowView.hidden = YES;
+    self.showdowView = showdowView;
+    [self addSubview:showdowView];
+    
+    
+    UILabel* indexView = [[UILabel alloc] init];
+    self.indexView = indexView;
+    self.indexView.hidden = YES;
+//    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    self.remainbtn = button;
+//    self.remainbtn.titleLabel.font = [UIFont systemFontOfSize:12.0];
+//    [button setTitleColor:self.linechatset.ReminderColor forState:UIControlStateNormal];  //self.linechatset.ReminderColor
+//    [self updateRemainBtn];
+//    button.hidden = YES;
+    [self addSubview:indexView];
 }
 
 #pragma mark - 手势的添加
@@ -237,7 +353,7 @@
                 [self.delegate LinechartBasicView:self width:xstep * self.xarray.count + xleft Scroll:scr];
             }
         }
-        //    每次缩放后都应该将scale设为1，让缩放手势和缩放比例根据当前缩放后的位置去计算
+        //每次缩放后都应该将scale设为1，让缩放手势和缩放比例根据当前缩放后的位置去计算
         ges.scale = 1;
     }
 }
@@ -246,6 +362,9 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     // 1.获得当前的触摸点
     UITouch *touch = [touches anyObject];
+    if (touch.view == self.showdowView) {
+        return;
+    }
     CGPoint startPos = [touch locationInView:touch.view];
     
     int localx = startPos.x - xleft;
@@ -283,10 +402,10 @@ void drawArc(int x, int y, int r)
     buttons=[[NSMutableArray alloc] init];
     
     //先连线
-    CGFloat ypixunit = (myH - ybottom - ytop) / self.linechatset.ytotal;
+    CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
     for (int z = 0; z < self.xarray.count; z++) {
         NSNumber *num = self.yarray[z];
-        CGFloat ypoint0 =  myH - (ybottom + [num intValue] * ypixunit);
+        CGFloat ypoint0 =  myH - (ybottom + ([num intValue] - self.linechatset.ybasic) * ypixunit);
         CGPoint temppoint = CGPointMake(xleft + z*xstep, ypoint0);
         if(z == 0)
         {
@@ -310,12 +429,13 @@ void drawArc(int x, int y, int r)
         path=[path smoothedPathWithGranularity:self.yarray.count];
     }
     
-    path.lineWidth = 5;
+    path.lineWidth = 8;
     return path;
 }
 
 
 - (void)animate{
+    
     for (UIButton* button in buttons) {
         [button removeFromSuperview];
     }
@@ -325,17 +445,17 @@ void drawArc(int x, int y, int r)
     animation.fromValue = @0;
     animation.toValue = @1;
     animation.duration = 3.0;
-    animation.delegate=self;
+    animation.delegate= nil;
     [self.curveshapeLayer addAnimation:animation forKey:@"MPStroke"];
     
     for (UIButton* button in buttons) {
         [button removeFromSuperview];
     }
     
-    CGFloat ypixunit = (myH - ybottom - ytop) / self.linechatset.ytotal;
+    CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
     for (int z = 0; z < self.xarray.count; z++) {
         NSNumber *num = self.yarray[z];
-        CGFloat ypoint0 =  myH - (ybottom + [num intValue] * ypixunit);
+        CGFloat ypoint0 =  myH - (ybottom + ([num intValue] - self.linechatset.ybasic) * ypixunit);
         CGPoint temppoint = CGPointMake(xleft + z*xstep, ypoint0);
        
         
@@ -362,16 +482,47 @@ void drawArc(int x, int y, int r)
 
 -(void) updateRemainBtn{
     NSNumber *num0 = self.yarray[index];
+    if ([num0 isEqualToNumber:NAValidNum]) {
+        return;    //不做处理
+    }
     NSString *string = [NSString stringWithFormat:@"%d",[num0 intValue]];
-    CGFloat ypixunit = (myH - ybottom - ytop) / self.linechatset.ytotal;
-    CGFloat ypoint0 =  myH - (ybottom + [num0 intValue] * ypixunit);
-    CGFloat remainH = pointR*2;
-    CGFloat remainW = 100;
+    CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
+    CGFloat ypoint0 =  myH - (ybottom + ([num0 intValue] - self.linechatset.ybasic) * ypixunit);
+    CGFloat remainH = 29.5;
+    CGFloat remainW = 50;
     CGFloat remainX = (xleft + xstep * index - remainW/2);
-    CGFloat remainY = ypoint0-21-pointR- 2;
-    self.remainbtn.hidden = NO;
-    self.remainbtn.frame = CGRectMake(remainX, remainY, remainW, remainH);
-    [self.remainbtn setTitle:string forState:UIControlStateNormal];
+    CGFloat remainY = ypoint0-21-pointR- 2-6;
+    
+    CGFloat maxY = (myH - ybottom);
+    if(remainY > maxY){
+        remainY = maxY;
+    }
+    
+    CGFloat showW = 40.0;
+    CGFloat showdowX = remainX + remainW/2 - showW/2;
+    
+    self.indexView.text = [NSString stringWithFormat:@"%d",[num0 intValue]];
+    self.indexView.hidden = NO;
+    self.indexView.frame = CGRectMake(showdowX, remainY, showW, remainH);
+//    [self.remainbtn setBackgroundImage:[UIImage imageNamed:@"statistics_data_bg"] forState:UIControlStateNormal];
+//    self.remainbtn.hidden = NO;
+//    self.remainbtn.frame = CGRectMake(showdowX, remainY, showW, remainH);
+//    [self.remainbtn setTitle:string forState:UIControlStateNormal];
+    
+    [self.indexPointButton removeFromSuperview];
+    CGFloat centerY =  myH - (ybottom + ([num0 intValue]- self.linechatset.ybasic)* ypixunit);
+    CGPoint temppoint = CGPointMake(xleft + index*xstep, centerY);
+    UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
+    button.layer.cornerRadius=3;
+    button.frame=CGRectMake(0, 0, 6, 6);
+    button.center = temppoint;
+    button.backgroundColor = self.linechatset.PointColor;
+    self.indexPointButton = button;
+    [self addSubview:button];
+    
+    //设置layer的位置
+    self.showdowView.hidden = NO;
+    self.showdowView.frame = CGRectMake(showdowX, 0, showW, self.height);
 }
 
 

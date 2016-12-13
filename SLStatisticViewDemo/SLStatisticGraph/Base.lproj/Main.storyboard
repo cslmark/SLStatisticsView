@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sqG-cJ-pLa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sqG-cJ-pLa">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--DEMO-->
@@ -12,12 +16,12 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dLF-da-JIo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="Ggg-Tz-qD6">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3Wa-Rm-NLl" style="IBUITableViewCellStyleDefault" id="MmO-SB-lhn">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MmO-SB-lhn" id="2zQ-nD-mMo">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -27,7 +31,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -41,7 +45,7 @@
                             <tableViewSection id="jwi-Tc-MaE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Qkn-kO-mIQ" style="IBUITableViewCellStyleDefault" id="GWb-gF-cbO">
-                                        <rect key="frame" x="0.0" y="179" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="115" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GWb-gF-cbO" id="NTq-af-i6R">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -51,7 +55,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -69,11 +73,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="DEMO" id="ooO-4O-fs6"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iae-pw-VbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="307"/>
+            <point key="canvasLocation" x="-542" y="292"/>
         </scene>
         <!--折线图演示-->
         <scene sceneID="fs9-dY-Gim">
@@ -87,42 +90,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ge-vj-Gjb">
-                                <rect key="frame" x="14" y="80" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ge-vj-Gjb">
+                                <rect key="frame" x="16" y="80" width="68" height="30"/>
                                 <state key="normal" title="随机数组1"/>
                                 <connections>
                                     <action selector="showRandomArray1:" destination="L2E-1n-VYi" eventType="touchUpInside" id="45q-zC-fC1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-gH-BiA">
-                                <rect key="frame" x="89" y="80" width="69" height="30"/>
-                                <state key="normal" title="随机数组2"/>
-                                <connections>
-                                    <action selector="showRandomArray2:" destination="L2E-1n-VYi" eventType="touchUpInside" id="eMc-21-gUO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13p-BY-EyQ">
-                                <rect key="frame" x="177" y="80" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13p-BY-EyQ">
+                                <rect key="frame" x="273" y="118" width="31" height="30"/>
                                 <state key="normal" title="动画"/>
                                 <connections>
                                     <action selector="animateClick:" destination="L2E-1n-VYi" eventType="touchUpInside" id="5dS-Ef-GGk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNn-UE-vHc">
-                                <rect key="frame" x="243" y="80" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNn-UE-vHc">
+                                <rect key="frame" x="227" y="80" width="77" height="30"/>
                                 <state key="normal" title="折线、曲线"/>
                                 <connections>
                                     <action selector="sharpChange:" destination="L2E-1n-VYi" eventType="touchUpInside" id="bbO-HC-B89"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5V-gH-BiA">
+                                <rect key="frame" x="16" y="118" width="71" height="30"/>
+                                <state key="normal" title="随机数组2"/>
+                                <connections>
+                                    <action selector="showRandomArray2:" destination="L2E-1n-VYi" eventType="touchUpInside" id="eMc-21-gUO"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.70588235294117641" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tNn-UE-vHc" secondAttribute="trailing" constant="16" id="5CM-2o-3bp"/>
+                            <constraint firstItem="0ge-vj-Gjb" firstAttribute="top" secondItem="6Ad-Cn-rro" secondAttribute="bottom" constant="16" id="68e-u1-bjV"/>
+                            <constraint firstAttribute="trailing" secondItem="13p-BY-EyQ" secondAttribute="trailing" constant="16" id="6RI-qV-7SH"/>
+                            <constraint firstItem="0ge-vj-Gjb" firstAttribute="leading" secondItem="Iz2-cd-ldu" secondAttribute="leading" constant="16" id="8aw-c4-jSc"/>
+                            <constraint firstItem="tNn-UE-vHc" firstAttribute="top" secondItem="6Ad-Cn-rro" secondAttribute="bottom" constant="16" id="FWo-US-2kG"/>
+                            <constraint firstItem="R5V-gH-BiA" firstAttribute="top" secondItem="0ge-vj-Gjb" secondAttribute="bottom" constant="8" id="iB4-eG-7lL"/>
+                            <constraint firstItem="R5V-gH-BiA" firstAttribute="leading" secondItem="Iz2-cd-ldu" secondAttribute="leading" constant="16" id="ntE-EW-dH0"/>
+                            <constraint firstItem="13p-BY-EyQ" firstAttribute="top" secondItem="tNn-UE-vHc" secondAttribute="bottom" constant="8" id="wN8-JN-buX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="折线图演示" id="dqi-9A-wxi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COI-py-pHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="593"/>
+            <point key="canvasLocation" x="313.125" y="592.6056338028169"/>
         </scene>
         <!--柱状图演示-->
         <scene sceneID="l2w-lB-8wf">
@@ -136,29 +149,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-Lq-hDw">
-                                <rect key="frame" x="8" y="72" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-Lq-hDw">
+                                <rect key="frame" x="16" y="80" width="68" height="30"/>
                                 <state key="normal" title="随机数组1"/>
                                 <connections>
                                     <action selector="random1show:" destination="Y7u-aH-Qgd" eventType="touchUpInside" id="vmc-Gw-caV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciQ-hA-OEV">
-                                <rect key="frame" x="83" y="72" width="69" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciQ-hA-OEV">
+                                <rect key="frame" x="233" y="80" width="71" height="30"/>
                                 <state key="normal" title="随机数组2"/>
                                 <connections>
                                     <action selector="random2show:" destination="Y7u-aH-Qgd" eventType="touchUpInside" id="eCf-2D-9nj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-kP-UYU">
-                                <rect key="frame" x="171" y="72" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-kP-UYU">
+                                <rect key="frame" x="144.5" y="80" width="31" height="30"/>
                                 <state key="normal" title="动画"/>
                                 <connections>
                                     <action selector="barAnimateshow:" destination="Y7u-aH-Qgd" eventType="touchUpInside" id="sfg-9w-Vwg"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.70588235294117641" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ocF-Lq-hDw" firstAttribute="top" secondItem="epv-to-yi3" secondAttribute="bottom" constant="16" id="7f7-JP-Mcc"/>
+                            <constraint firstItem="UcN-kP-UYU" firstAttribute="top" secondItem="epv-to-yi3" secondAttribute="bottom" constant="16" id="MaD-tN-9e8"/>
+                            <constraint firstAttribute="trailing" secondItem="ciQ-hA-OEV" secondAttribute="trailing" constant="16" id="ZIN-2w-9ME"/>
+                            <constraint firstItem="UcN-kP-UYU" firstAttribute="centerX" secondItem="b8y-A5-r9s" secondAttribute="centerX" id="jEf-I9-Zhr"/>
+                            <constraint firstItem="ocF-Lq-hDw" firstAttribute="leading" secondItem="b8y-A5-r9s" secondAttribute="leading" constant="16" id="rKx-mE-ctN"/>
+                            <constraint firstItem="ciQ-hA-OEV" firstAttribute="top" secondItem="epv-to-yi3" secondAttribute="bottom" constant="16" id="w9i-qY-1aM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="柱状图演示" id="8n2-qM-l7t"/>
                 </viewController>
@@ -170,7 +191,6 @@
         <scene sceneID="wuo-rO-lMh">
             <objects>
                 <navigationController id="sqG-cJ-pLa" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f6M-dV-Vr9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -181,7 +201,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEm-yU-Ewz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-580" y="301"/>
+            <point key="canvasLocation" x="-1290" y="292"/>
         </scene>
     </scenes>
 </document>

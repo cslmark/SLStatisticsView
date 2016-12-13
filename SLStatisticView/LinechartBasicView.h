@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define   NAValidNum    @(255)
+
 @class statisticsSet, LinechartBasicView;
 
 @protocol LinechartBasicViewDelegate <NSObject>
