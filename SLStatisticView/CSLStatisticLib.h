@@ -20,6 +20,9 @@
 //分类
 #import "UIView+Frame.h"
 #import "UIBezierPath+curved.h"
+//带有Y坐标轴的图标
+#import "SLLineChartView.h"
+#import "SLColumnChartView.h"
 
 
 #endif /* CSLStatisticLib_h */

@@ -184,7 +184,7 @@
     //开始画坐标线
     [self.linechatset.ylineCorlor set];
     CGContextSetLineWidth(ctx, 0.5);
-    int ycount = self.linechatset.ytotal/self.linechatset.yunit;
+    int ycount = (self.linechatset.ytotal - self.linechatset.ybasic)/self.linechatset.yunit;
     CGFloat Ypixall = (myH - ybottom - ytop);
     CGFloat Y_padding = Ypixall / ycount;
     for (int i = 0; i < ycount+1; i++) {
@@ -277,10 +277,11 @@
     CGFloat barWidth= xpointW;
     CGFloat radius=barWidth*(0.2);
     
-    CGFloat ypixunit = (myH - ybottom - ytop) / self.linechatset.ytotal;
+    CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
     for (int z = 0; z < self.xarray.count; z++) {
         NSNumber *num = self.yarray[z];
-        CGFloat ypoint0 =  myH - (ybottom + [num intValue] * ypixunit);
+        CGFloat validNum = ([num intValue]- self.linechatset.ybasic);
+        CGFloat ypoint0 =  myH - (ybottom + validNum * ypixunit);
         CGFloat xpoint0 = (z * xstep) - xstep/4 + xleft;   //保证在中心
         CGFloat xpointH = [num intValue] * ypixunit;
         CGFloat xpointW = xstep/2;
@@ -299,9 +300,12 @@
         //柱状图上面的圆角
         CAShapeLayer *maskLayer = [CAShapeLayer layer];
         maskLayer.frame = button.bounds;
-        maskLayer.path = [UIBezierPath bezierPathWithRoundedRect:button.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(radius, radius)].CGPath;
+        if ([num intValue] >= 0) {
+            maskLayer.path = [UIBezierPath bezierPathWithRoundedRect:button.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(radius, radius)].CGPath;
+        }else{
+           maskLayer.path = [UIBezierPath bezierPathWithRoundedRect:button.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(radius, radius)].CGPath;
+        }
         button.layer.mask=maskLayer;
-        
         CAGradientLayer *gradientLayer = [CAGradientLayer layer];
         gradientLayer.frame = button.bounds;
         [button.layer addSublayer:gradientLayer];
@@ -340,12 +344,27 @@
 -(void) updateRemainBtn{
     NSNumber *num0 = self.yarray[index];
     NSString *string = [NSString stringWithFormat:@"%d",[num0 intValue]];
+    CGFloat validNum = ([num0 intValue]- self.linechatset.ybasic);
     CGFloat ypixunit = (myH - ybottom - ytop) / self.linechatset.ytotal;
-    CGFloat ypoint0 =  myH - (ybottom + [num0 intValue] * ypixunit);
+    CGFloat ypoint0 =  myH - (ybottom + validNum * ypixunit);
     CGFloat remainH = pointR*2;
     CGFloat remainW = 100;
     CGFloat remainX = (xleft + xstep * index - remainW/2);
     CGFloat remainY = ypoint0-21-pointR- 2;
+    if ([num0 intValue] >= 0) {
+        remainY = ypoint0-21-pointR- 2;
+    }else{
+        remainY = ypoint0+21+pointR+2;
+    }
+    
+    CGFloat maxY = (myH - ybottom);
+    CGFloat minY = ytop;
+    if ((remainY- remainH) <= minY) {
+        remainY = minY + remainH;
+    }else if(remainY > maxY){
+        remainY = maxY;
+    }
+    
     self.remainbtn.hidden = NO;
     self.remainbtn.frame = CGRectMake(remainX, remainY, remainW, remainH);
     [self.remainbtn setTitle:string forState:UIControlStateNormal];

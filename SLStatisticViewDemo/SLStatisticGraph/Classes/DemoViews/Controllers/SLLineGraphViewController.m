@@ -9,8 +9,16 @@
 #import "SLLineGraphViewController.h"
 #import "CSLStatisticLib.h"
 
+
 @interface SLLineGraphViewController ()
-@property (nonatomic, weak) LineChartView* chat;
+{
+    CGFloat itemW;
+    CGFloat itemH;
+    CGFloat bottomRemain;   //底部留给x坐标的范围
+    CGFloat ytopRemain;
+    CGFloat GraphH;
+}
+@property (nonatomic, weak) SLLineChartView* chat;
 @property (nonatomic, strong) statisticsSet* newset;
 
 @property (nonatomic, strong) NSMutableArray* xarray;
@@ -31,34 +39,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    bottomRemain = 35.0;
+    ytopRemain = 20.0;
+    GraphH = KScreen_H - 160;
     statisticsSet* newset = [[statisticsSet alloc]init];
     self.newset = newset;
-    newset.ytotal = 100;
-    newset.ybasic = 0;
-    newset.yunit = 5;
+    newset.ytotal = 160;
+    newset.ybasic = -20;
+    newset.yunit = 20;
     newset.xunit = 1;
     newset.typicalXlabel = @"10:00";
-    newset.typicalYlabel = @"100";
-    newset.yaxisTop = 20;
-    newset.yaxisbottom = 35;
-    newset.xaxisbottom = 20;
-    newset.myW = 200;
-    newset.myH = 400;
+    newset.typicalYlabel = @"-100";
+    newset.yaxisTop = ytopRemain;
+    newset.yaxisbottom = bottomRemain;
+    newset.xaxisbottom = 29;
+    newset.myW = 345;
+    newset.myH = 200;
     
-    newset.CurveColor = [UIColor redColor];
-    newset.PointColor = [UIColor blackColor];
-    newset.XlabelColor = [UIColor redColor];
-    newset.ylineCorlor = SLColor(0x00, 0x00, 0x00, 0.7);
-    newset.ReminderColor = [UIColor blueColor];
+    newset.CurveColor = [UIColor whiteColor];
+    newset.PointColor = [UIColor colorWithHex:@"#FFCD00"];
+    newset.XlabelColor = [UIColor whiteColor];
+    newset.ylineCorlor = [UIColor clearColor];
+    newset.ReminderColor = [UIColor colorWithHex:@"#39D02D"];
+    newset.YlabelFont = [UIFont  systemFontOfSize:14.0];
+    newset.YlabelColor = [UIColor whiteColor];
     
     newset.animate = NO;
-    newset.cureved = NO;
+    newset.cureved = YES;
     
-    CGRect rect = CGRectMake(0, 100, 320, 468);
-    LineChartView* chat = [LineChartView builtNewstatisticViewWithFrame:rect statisticset:newset];
+    CGRect rect = CGRectMake(0, 160, KScreen_W, GraphH);
+    SLLineChartView* chat = [SLLineChartView builtNewstatisticViewWithFrame:rect statisticset:newset];
     self.chat = chat;
-    self.chat.backgroundColor = [UIColor lightGrayColor];
+    self.chat.backgroundColor = [UIColor clearColor];
     [self.view addSubview:chat];
+    
+    self.newset.typicalXlabel = @"12:00";
+    [self.chat setLinechatset:self.newset];
+    [self.chat setDataXarray:self.xarray Yarray:self.yarray];
 }
 
 #pragma mark - 懒加载和假数据
@@ -77,10 +94,7 @@
     if (_yarray == nil) {
         _yarray = [NSMutableArray array];
         for (int i = 0; i < 30; i++) {
-            int y = arc4random() % 100 + 1;
-            if ((i == 2) || (i == 3)) {
-                y = 255;
-            }
+            int y = arc4random() % 100 - 20;
             NSNumber* num = [NSNumber numberWithInt:y];
             [_yarray addObject:num];
         }
@@ -103,7 +117,7 @@
     if (_yarray0 == nil) {
         _yarray0 = [NSMutableArray array];
         for (int i = 0; i < 30; i++) {
-            int y = arc4random() % 100 + 1;
+            int y = arc4random() % 100 - 20;
             NSNumber* num = [NSNumber numberWithInt:y];
             [_yarray0 addObject:num];
         }
