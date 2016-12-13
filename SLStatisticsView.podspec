@@ -1,11 +1,9 @@
 #
-#  Be sure to run `pod spec lint SLStatisticsView.podspec' to ensure this is a
+#  Be sure to run `pod spec lint SLStatisticsView.podspec' to ensure this ia
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
-
+#  To see wo
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -16,7 +14,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SLStatisticsView"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "Offer a easy to built a statisticsView For iOS"
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/cslmark/SLStatisticsView.git", :tag => "#{s.version}", :commit => "8932e206648fd17ef5d1700a2754a0f8601bb379" }
+  s.source       = { :git => "https://github.com/cslmark/SLStatisticsView.git", :tag => "s.version" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
