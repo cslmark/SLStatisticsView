@@ -78,9 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-<<<<<<< HEAD
-  s.source       = { :git => "https://github.com/cslmark/SLStatisticsView.git", :tag => "s.version.to_s" }
->>>>>>> 7de9ce7e8f25d0cb8146b67cca55f5aa71c04c16
+  s.source       = { :git => "https://github.com/cslmark/SLStatisticsView.git", :commit => "bc2859db2e2202dc13bcae83524b4f4d0bbcb770" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
