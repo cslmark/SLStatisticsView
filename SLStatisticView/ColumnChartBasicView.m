@@ -306,6 +306,7 @@
            maskLayer.path = [UIBezierPath bezierPathWithRoundedRect:button.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(radius, radius)].CGPath;
         }
         button.layer.mask=maskLayer;
+        button.layer.masksToBounds = YES;
         CAGradientLayer *gradientLayer = [CAGradientLayer layer];
         gradientLayer.frame = button.bounds;
         [button.layer addSublayer:gradientLayer];
@@ -318,13 +319,21 @@
         [self addSubview:button];
         
         if (animated) {
-            [UIView animateWithDuration:2.0 delay:z*0.1 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                button.y = ypoint0;
+            button.frame = CGRectMake(xpoint0, ypoint0+xpointH, xpointW, 0);
+            [UIView animateWithDuration:2.0 delay:z*0.1 usingSpringWithDamping:1.0 initialSpringVelocity:1.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                button.frame = columnrect;
             }completion:^(BOOL finished) {
                 [UIView animateWithDuration:.15 animations:^{
                     button.frame = columnrect;
                 }];
             }];
+//            [UIView animateWithDuration:2.0 delay:z*0.1 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//                button.frame = columnrect;
+//            }completion:^(BOOL finished) {
+//                [UIView animateWithDuration:.15 animations:^{
+//                    button.frame = columnrect;
+//                }];
+//            }];
         }
         [buttons addObject:button];
     }
