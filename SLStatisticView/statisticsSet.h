@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface statisticsSet : NSObject<NSCopying,NSMutableCopying>
+@interface statisticsSet : NSObject
 //y轴的总数目
 @property (nonatomic, assign) CGFloat ytotal;
 //y轴的其实坐标

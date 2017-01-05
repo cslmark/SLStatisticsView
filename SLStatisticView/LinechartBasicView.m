@@ -219,9 +219,9 @@
     }
 
     //开始绘制曲线
-    CGFloat lastX = 0, lastY = 0;
-    BOOL lastCur = NO;
-    CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
+//    CGFloat lastX = 0, lastY = 0;
+//    BOOL lastCur = NO;
+//    CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
     
 //    CGContextSaveGState(ctx);
 //    [self.linechatset.CurveColor set];
@@ -485,7 +485,7 @@ void drawArc(int x, int y, int r)
     if ([num0 isEqualToNumber:NAValidNum]) {
         return;    //不做处理
     }
-    NSString *string = [NSString stringWithFormat:@"%d",[num0 intValue]];
+//    NSString *string = [NSString stringWithFormat:@"%d",[num0 intValue]];
     CGFloat ypixunit = (myH - ybottom - ytop) / (self.linechatset.ytotal - self.linechatset.ybasic);
     CGFloat ypoint0 =  myH - (ybottom + ([num0 intValue] - self.linechatset.ybasic) * ypixunit);
     CGFloat remainH = 29.5;
