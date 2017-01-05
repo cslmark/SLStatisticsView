@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "cslmark" => "chensl@hadlinks.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/cslmark/SLStatisticsView.git", :commit => "d2cf2717547f0e7b62590993eb72f1577a594375" }
+  s.source       = { :git => "https://github.com/cslmark/SLStatisticsView.git", :tag => "0.1.1", :commit => "3c7f1bad719f88ab025d012bf216e364bcb8bdd0" }
   s.source_files  = "SLStatisticView/*.{h,m}"
   s.framework  = "Foundation","UIKit"
   s.requires_arc = true
